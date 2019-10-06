@@ -35,7 +35,7 @@ In the SWI-Prolog environment, enter the following to load the algorithm:
 `['texttobrall2'].`
 `texttobr2(u,u,u,u,true,false,false,false,false,false),texttobr(u,u,u,u).`
 
-* Copy and paste contents of file1a.txt into Terminal window (Mac) to breason out algorithms for all instances of words.
+* Copy and paste contents of file1a.txt into Terminal window (Mac) (one to a few lines at a time) to breason out algorithms for all instances of words.
 
 # Versioning
 
