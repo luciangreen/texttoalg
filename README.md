@@ -31,6 +31,12 @@ In the SWI-Prolog environment, enter the following to load the algorithm:
 
 * Follow instructions in https://github.com/luciangreen/listprologinterpreter/blob/master/Instructions_for_Using_texttobr(2).pl.txt when using texttoalg, texttobr, or texttobr2 to avoid medical problems.
 
+* Before breasoning, breason out algdict1.txt and algdict2.txt to allow breasoning multiple instances by dragging them from Finder (Mac) to empty BBEdit window for file.txt, then enter:
+`['texttobrall2'].`
+`texttobr2(u,u,u,u,true,false,false,false,false,false),texttobr(u,u,u,u).`
+
+* Copy and paste contents of file1a.txt into Terminal window (Mac) to breason out algorithms for all instances of words.
+
 # Versioning
 
 We will use SemVer for versioning.
