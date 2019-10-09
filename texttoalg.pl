@@ -3,6 +3,7 @@
 %% and ['texttoalg'].
 %% Run with texttoalg(u,u,u,u,true,true,true,true,true,true).
 %% or texttoalg(u,u,u,u,true,false,false,false,false,false).
+%% or texttoalg(8,u,u,2000,true,false,false,false,false,false). for PhD (16k words per algorithm)
 
 %% Important: See instructions for using texttobr.pl at https://lucianpedia.wikia.com/wiki/Instructions_for_Using_texttobr(2).pl .
 
@@ -16,6 +17,7 @@
 %% texttobr2(Runs,File,StringtoBreason,BreasoningLimit).
 :- include('mergetexttobrdict.pl').
 :- include('la_strings').
+:- use_module(library(date)).
 
 %% Brth is true or false
 texttoalg(N1,Filex1,Stringx1,M1,Brth,Room,PartOfRoom,Direction,ObjectToPrepare,ObjectToFinish) :-
@@ -30,7 +32,8 @@ texttoalg(N1,Filex1,Stringx1,M1,Brth,Room,PartOfRoom,Direction,ObjectToPrepare,O
 	M=all), %% If m1 is undefined or all then m=all
 
 	prep(List1,BrDict03,BrDict03t,Filex,Stringx1,M),
-	br2(List1,BrDict03,BrDict2,BrDict03t,BrDict03t2,1,"",Shell2,N,M,Brth,Room,PartOfRoom,Direction,ObjectToPrepare,ObjectToFinish),
+	term_to_atom(List1,List1A),atom_string(List1A,List1B),string_concat(List1B,"\n\n",List1C),
+	br2(List1,BrDict03,BrDict2,BrDict03t,BrDict03t2,1,List1C,Shell2,N,M,Brth,Room,PartOfRoom,Direction,ObjectToPrepare,ObjectToFinish),
 	sort(BrDict2,BrDict3),
 	(BrDict03=BrDict3->true;
 	(open_s("algdict1.txt",write,Stream),
@@ -47,7 +50,12 @@ term_to_atom(BrDict3,BrDict31),
 	write(Stream2,BrDict03t31),
  	close(Stream2))),
  	
-	(open_s("file1a.txt",write,Stream1),
+ 			get_time(TS),stamp_date_time(TS,date(Year,Month,Day,Hour1,Minute1,Seconda,_A,_TZ,_False),local),
+	concat_list("file",[Year,Month,Day,Hour1,Minute1,Seconda],File1),
+	concat_list(File1,[".txt"],File2),
+
+
+	(open_s(File2,write,Stream1),
 %%	string_codes(BrDict3),
 	write(Stream1,Shell2),
 	close(Stream1)),
