@@ -11,7 +11,11 @@ Please read the following instructions on how to install the project on your com
 
 Please download and install SWI-Prolog for your machine at https://www.swi-prolog.org/build/.
 
-Please download Lucian Green's List Prolog Interpreter Repository at https://github.com/luciangreen/listprologinterpreter.  To use this algorithm, you need another window open to develop and test each specification, algorithm and result, before pasting it into texttoalg.
+Install List Prolog Interpreter Repository (https://github.com/luciangreen/listprologinterpreter).
+
+Install Text to Breasonings Repository (https://github.com/luciangreen/Text-to-Breasonings).
+
+To use this algorithm, you need another window open to develop and test each specification, algorithm and result, before pasting it into texttoalg.
 
 
 # Installation from List Prolog Package Manager (LPPM)
