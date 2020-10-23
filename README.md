@@ -26,8 +26,7 @@ To use this algorithm, you need another window open to develop and test each spe
 
 * Download the repository to your machine.
 In the SWI-Prolog environment, enter the following to load the algorithm:
-`['../Text-to-Breasonings/meditationnoreplace'].`    
-`['../Text-to-Breasonings/texttobrall2'].`    
+`['../Text-to-Breasonings/text_to_breasonings.pl'].`    
 `['texttoalg'].`    
 
 * Enter the following to breason out Breasonings,Breathsonings,Room,PartOfRoom,Direction,ObjectToPrepare and ObjectToFinish. (Note: takes quite a while.)
