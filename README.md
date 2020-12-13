@@ -24,6 +24,7 @@ To use this algorithm, you need another window open to develop and test each spe
 ```
 git clone https://github.com/luciangreen/List-Prolog-Package-Manager.git
 cd List-Prolog-Package-Manager
+swipl
 ```
 loading LPPM with `['lppm'].` then installing the package by running `lppm_install("luciangreen","texttoalg").`.
 
