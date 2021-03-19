@@ -1,5 +1,4 @@
-%% Load with ['meditationnoreplace'].
-%% and ['texttobrall2'].
+%% Load with ['../Text-to-Breasonings/text_to_breasonings.pl'].
 %% and ['texttoalg'].
 %% Run with texttoalg(u,u,u,u,true,true,true,true,true,true).
 %% or texttoalg(u,u,u,u,true,false,false,false,false,false).
@@ -338,7 +337,7 @@ br([Word|Words],BrDict,BrDict2,BrDict4,BrDict5,Shell1,Shell2,N1,M1,Brth,Room,Par
 term_to_atom(Query,Query1),
 term_to_atom(Algorithm,Algorithm1),
 term_to_atom(Result,Result1),
-concat_list([Shell1,"swipl -G100g -T20g -L2g\n[listprolog].\nleash(-all),visible(+all),protocol(\"./file1.txt\"),trace,interpret(off,",Query1,",",Algorithm1,",",Result1,"),notrace,noprotocol.\nhalt.\nswipl -G100g -T20g -L2g\n[meditationnoreplace].\n['texttobrall2'].\ntime((N = ",N1,",","M = ",M1,", texttobr2(N,\"file1.txt\",u,M,",Brth,",",Room,",",PartOfRoom,",",Direction,",",ObjectToPrepare,",",ObjectToFinish,"),texttobr(N,\"file1.txt\",u,M))).\nhalt.\n\n"],Shell3),
+concat_list([Shell1,"swipl -G100g -T20g -L2g\n[listprolog].\nleash(-all),visible(+all),protocol(\"./file1.txt\"),trace,interpret(off,",Query1,",",Algorithm1,",",Result1,"),notrace,noprotocol.\nhalt.\nswipl -G100g -T20g -L2g\n['../Text-to-Breasonings/text_to_breasonings.pl'].\ntime((N = ",N1,",","M = ",M1,", texttobr2(N,\"file1.txt\",u,M,",Brth,",",Room,",",PartOfRoom,",",Direction,",",ObjectToPrepare,",",ObjectToFinish,"),texttobr(N,\"file1.txt\",u,M))).\nhalt.\n\n"],Shell3),
 
 br(Words,BrDict3,BrDict2,BrDict3t1,BrDict5,Shell3,Shell2,N1,M1,Brth,Room,PartOfRoom,Direction,ObjectToPrepare,ObjectToFinish).
 	%%).

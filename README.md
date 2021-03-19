@@ -46,7 +46,7 @@ In the SWI-Prolog environment, enter the following to load the algorithm:
 * Follow instructions in https://github.com/luciangreen/Text-to-Breasonings/blob/master/Instructions_for_Using_texttobr(2).pl.txt when using texttoalg, texttobr, or texttobr2 to avoid medical problems.
 
 * Before breasoning, breason out algdict1.txt and algdict2.txt to allow breasoning multiple instances by dragging them from Finder (Mac) to empty BBEdit window for file.txt, then enter:
-`['../Text-to-Breasonings/texttobrall2'].`
+`['../Text-to-Breasonings/text_to_breasonings.pl'].`
 `texttobr2(u,u,u,u,true,false,false,false,false,false),texttobr(u,u,u,u).`
 
 * Not recommended (due to idiosyncrasies of Shell, so breasoning out the dictionaries in the previous step may have to suffice): Copy and paste contents of file1a.txt into Terminal window (Mac) (one to a few lines at a time) to breason out algorithms for all instances of words.
