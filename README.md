@@ -9,29 +9,30 @@ Please read the following instructions on how to install the project on your com
 
 # Prerequisites
 
-Please download and install SWI-Prolog for your machine at https://www.swi-prolog.org/build/.
+* Please download and install SWI-Prolog for your machine at `https://www.swi-prolog.org/build/`.
 
-Install List Prolog Interpreter Repository (https://github.com/luciangreen/listprologinterpreter).
+# 1. Install manually
 
-Install Text to Breasonings Repository (https://github.com/luciangreen/Text-to-Breasonings).
+Download <a href="http://github.com/luciangreen/texttoalg/">this repository</a>, the <a href="https://github.com/luciangreen/listprologinterpreter">List Prolog Interpreter Repository</a> and the <a href="https://github.com/luciangreen/Text-to-Breasonings">Text to Breasonings Repository</a>.
 
-To use this algorithm, you need another window open to develop and test each specification, algorithm and result, before pasting it into texttoalg.
+# 2. Or Install from List Prolog Package Manager (LPPM)
 
+* Download the <a href="https://github.com/luciangreen/List-Prolog-Package-Manager">LPPM Repository</a>:
 
-# Installation from List Prolog Package Manager (LPPM)
-
-* Optionally, you can install from LPPM by installing <a href="https://www.swi-prolog.org/build/">SWI-Prolog</a> for your machine, downloading the <a href="https://github.com/luciangreen/List-Prolog-Package-Manager">LPPM Repository</a>,
 ```
 git clone https://github.com/luciangreen/List-Prolog-Package-Manager.git
 cd List-Prolog-Package-Manager
 swipl
+['lppm'].
+lppm_install("luciangreen","texttoalg")
+halt
 ```
-loading LPPM with `['lppm'].` then installing the package by running `lppm_install("luciangreen","texttoalg").`.
 
-# Installing
+# Running
 
-* Download the repository to your machine.
-In the SWI-Prolog environment, enter the following to load the algorithm:
+* In Shell:
+`cd texttoalg`
+`swipl`
 `['../Text-to-Breasonings/text_to_breasonings.pl'].`    
 `['texttoalg'].`    
 
