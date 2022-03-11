@@ -1,0 +1,1 @@
+[[and,append],[hand,append],[up,plus],[word,append],[world,append]]
