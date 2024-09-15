@@ -71,7 +71,7 @@ replace00(Input1,Find,Replace,SepandPad,Input2,Input3) :-
 	string_codes(Input4,String1),
 	replace1(String1,Find,Replace,[],Input7),
 	string_codes(Output,Input7),
-	split_string(Output,SepandPad,SepandPad,Input8),
+	split_string_on_non_alpha(Output,Input8),
 	append(Input2,Input8,Input9),
 	replace00(Input5,Find,Replace,SepandPad,Input9,Input3), !.
 replace1([],_Find,_Replace,Input,Input) :- !.
@@ -150,7 +150,7 @@ string_atom(BrDict0t,Atom2),atom_to_term(Atom2,BrDict01t,_),
 	phrase_from_file_s(string(String00), Filex))->true;
 	String00=Stringx1),
 	
-	split_string(String00,SepandPad,SepandPad,List1),
+	split_string_on_non_alpha(String00,List1),
 	%%split_string_onnonletter(String00,List1),
 
 	truncate(List1,M,List),
