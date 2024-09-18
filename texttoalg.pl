@@ -14,8 +14,8 @@
 %% brdict1.txt contains word and object name, brdict2.txt contains object name and x, y and z
 
 %% texttobr2(Runs,File,StringtoBreason,BreasoningLimit).
-:- include('../Text-to-Breasonings/mergetexttobrdict.pl').
-:- include('../listprologinterpreter/la_strings').
+:-include('../Text-to-Breasonings/mergetexttobrdict.pl').
+:-include('../listprologinterpreter/la_strings.pl').
 :- use_module(library(date)).
 
 %% Brth is true or false

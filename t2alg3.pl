@@ -1,7 +1,7 @@
-:- include('../listprologinterpreter/la_strings.pl').
-%:- include('../Text-to-Breasonings/mergetexttobrdict.pl').
-:- include('../Text-to-Breasonings/texttobr2qb.pl').
-:- include('../Text-to-Breasonings/texttobr.pl').
+:-include('../listprologinterpreter/la_strings.pl').
+%:-include('../Text-to-Breasonings/mergetexttobrdict.pl').
+:-include('../Text-to-Breasonings/texttobr2qb.pl').
+:-include('../Text-to-Breasonings/texttobr.pl').
 t2alg3(N1,Filex1,Stringx1,M1) :-
 	t2alg3(N1,Filex1,Stringx1,M1,false,false,false,false,false,false,0).
 t2alg3(N1,Filex1,Stringx1,M1,Brth,Room,PartOfRoom,Direction,
